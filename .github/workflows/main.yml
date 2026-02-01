@@ -1,0 +1,34 @@
+name: "🚨 Auto-Review & Merge Force"
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+permissions:
+  contents: write
+  pull-requests: write
+  checks: read
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Auto-Review, Merge, and Delete Branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+        run: |
+          echo "Processing PR: $PR_URL"
+
+          # 1. Approve the PR (Required if repo requires reviews)
+          # We use "|| true" to prevent failure if we can't approve our own PR
+          gh pr review "$PR_URL" --approve --body "Auto-approved by GitHub Actions workflow." || echo "Could not approve PR (possibly self-submitted), proceeding..."
+
+          # 2. Merge Forcibly and Delete Branch
+          # --merge: Uses merge commit strategy
+          # --auto: Merges only after requirements are met (if any)
+          # --delete-branch: Deletes the branch after merging
+          gh pr merge "$PR_URL" --merge --auto --delete-branch
