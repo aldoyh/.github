@@ -1,28 +1,29 @@
-![Krypton Screenshot](https://media.cssninja.io/products/krypton/product.png "Krypton")
+# 👋 aldoyh
 
-# 👋 Krypton
+> A modern personal portfolio and profile page built with [Astro](https://astro.build), [Bulma](https://bulma.io), and [Alpine JS](https://github.com/alpinejs/alpine).
 
-> Krypton is a free ICO / Crypto template built by [cssninjaStudio](https://cssninja.io).
+[![GitHub Profile](https://img.shields.io/badge/GitHub-aldoyh-blue?logo=github)](https://github.com/aldoyh)
 
-[![cssninja-discord](https://img.shields.io/discord/785473098069311510?label=join%20us%20on%20discord&color=6944EC)](https://go.cssninja.io/discord)
+## ✌️ Preview
 
-## ✌️ preview
-
-Check out the live demo by clicking [here](https://krypton.cssninja.io). 
-Krypton is built with [Astro](https://astro.build), [Bulma](https://bulma.io) and [Alpine JS](https://github.com/alpinejs/alpine).
+This is the `.github` repository for aldoyh, featuring a custom landing page built with modern web technologies.
 
 ## 👍 Features
 
-* Astro v4.x
-* Bulma 0.9.x
-* Alpine v3.x
+* Astro v4.x for fast static site generation
+* Bulma 0.9.x for responsive UI components
+* Alpine JS v3.x for interactive elements
+* Automated deployments with GitHub Actions
+* Docker support for containerized deployment
 
 ## 👌 Usage
 
-1. Install Depedencies
+### Development
+
+1. Install Dependencies
 
 ```sh
-pnpm i
+pnpm install
 ```
 
 2. Run in dev mode
@@ -31,26 +32,38 @@ pnpm i
 pnpm dev
 ```
 
-3. Or build source
+3. Build for production
 
 ```sh
 pnpm build
 ```
 
-## 🍔 Issues
+4. Preview production build
 
-If you've found an issue or a bug, you can report it in the issues section of this repository. Please try to follow these simple guidelines to report your issue:
+```sh
+pnpm preview
+```
 
-* Issue definition
-* Expected behaviour
-* Actual behaviour
-* steps to reproduce
-* Already tried fixes (if relevant)
+## 🚀 Deployment
 
-## 🎉 More
+The site is automatically deployed using GitHub Actions when changes are pushed to the main branch. The workflow:
 
-Find more premium website and app templates on [Css Ninja](https://cssninja.io/).
+1. Builds the Astro site
+2. Creates a Docker image
+3. Deploys to the hosting environment
 
-## 🚀 About Us
+## 🛠️ Workflows
 
-Css Ninja is a web design studio. We build handcrafted and polished templates that will give some hype to your startup or to your next project.
+This repository includes several GitHub Actions workflows:
+
+- **deploy.yml** - Automated deployment pipeline
+- **release.yml** - Release management and versioning
+- **standard-version.yml** - Semantic versioning
+
+## 📝 License
+
+MIT License - See [LICENSE.md](LICENSE.md) for details.
+
+## 🎨 Based on Krypton Template
+
+This site is built on the [Krypton](https://github.com/cssninjaStudio/krypton) template by [cssninjaStudio](https://cssninja.io).
