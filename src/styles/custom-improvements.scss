@@ -1,0 +1,305 @@
+/*! custom-improvements.scss | Design Improvements */
+
+/* ==========================================================================
+Visual Design Improvements
+========================================================================== */
+
+/* 1. Improved Typography and Spacing */
+.title.main-title {
+    font-size: 3.5rem !important;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem !important;
+}
+
+.subtitle {
+    line-height: 1.7;
+    font-size: 1.15rem !important;
+}
+
+/* 2. Enhanced Section Spacing */
+.section {
+    padding: 5rem 1.5rem;
+    
+    &.is-medium {
+        padding: 6rem 1.5rem;
+    }
+    
+    &.is-large {
+        padding: 8rem 1.5rem;
+    }
+}
+
+/* 3. Improved Content Readability */
+.has-text-centered {
+    .title {
+        margin-bottom: 1.5rem;
+    }
+    
+    .subtitle {
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0.9;
+    }
+}
+
+/* 4. Better Card Design */
+.feature {
+    padding: 2rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    
+    &:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    img {
+        margin-bottom: 1.5rem;
+        filter: brightness(1.1);
+    }
+    
+    .title {
+        margin-bottom: 1rem;
+    }
+    
+    p {
+        opacity: 0.85;
+        line-height: 1.6;
+    }
+}
+
+/* 5. Enhanced Side Features */
+.side-feature-content {
+    padding: 2rem 0;
+    
+    .title {
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        
+        img {
+            width: 48px;
+            height: 48px;
+        }
+    }
+    
+    .divider {
+        margin: 1.5rem 0;
+    }
+    
+    p {
+        line-height: 1.7;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
+}
+
+/* 6. Improved Button Styles */
+.button.k-button {
+    padding: 1.25rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-2px);
+    }
+    
+    &.is-fat {
+        padding: 1.5rem 3rem;
+    }
+}
+
+/* 7. Better Section Dividers */
+.divider {
+    &.is-centered {
+        margin: 3rem auto;
+        opacity: 0.3;
+    }
+}
+
+/* 8. Improved Contact Form */
+.krypton-form {
+    .control {
+        margin-bottom: 1.5rem;
+    }
+    
+    input, textarea {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 1rem 1.5rem;
+        transition: all 0.3s ease;
+        
+        &:focus {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            outline: none;
+        }
+        
+        &::placeholder {
+            opacity: 0.5;
+        }
+    }
+    
+    textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+}
+
+/* 9. Hero Section Improvements */
+.landing-caption {
+    padding-right: 2rem;
+    
+    .buttons {
+        margin-top: 2.5rem;
+        gap: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+/* 10. About Section Styling */
+.content-wrapper.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    
+    p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+        opacity: 0.9;
+    }
+}
+
+/* 11. Better Icon Button Styles */
+.cta-wrapper {
+    margin-top: 2rem;
+    
+    .button {
+        min-width: 160px;
+    }
+}
+
+/* 12. Improved Footer Spacing */
+.krypton-footer {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    
+    .footer-columns {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    
+    .footer-logo {
+        margin-bottom: 3rem;
+    }
+}
+
+/* 13. Responsive Improvements */
+@media screen and (max-width: 768px) {
+    .title.main-title {
+        font-size: 2.5rem !important;
+    }
+    
+    .section {
+        padding: 3rem 1.5rem;
+    }
+    
+    .landing-caption {
+        padding-right: 0;
+        margin-bottom: 3rem;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        
+        .button {
+            width: 100%;
+        }
+    }
+}
+
+/* 14. Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 15. Better Focus States for Accessibility */
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: 2px solid rgba(0, 255, 153, 0.8);
+    outline-offset: 2px;
+}
+
+/* 16. Improved Animation Performance - Apply only on hover/active states */
+.feature:hover, .button:hover {
+    will-change: transform;
+}
+
+/* 17. Hero Image Enhancement */
+.hero-body {
+    .column.is-7 {
+        figure.image {
+            img {
+                filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+            }
+        }
+    }
+}
+
+/* Floating animation with reduced motion support */
+@media (prefers-reduced-motion: no-preference) {
+    .hero-body .column.is-7 figure.image img {
+        animation: float 6s ease-in-out infinite;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* 18. Client Logo Styling */
+.hero-footer {
+    padding: 2rem 0;
+    
+    .hero-logo {
+        opacity: 0.6;
+        transition: opacity 0.3s ease;
+        
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+/* 19. View Button Enhancement */
+.button.view-more {
+    margin-top: 3rem;
+    padding: 1.25rem 3rem;
+}
+
+/* 20. Section Title Improvements */
+.section {
+    .title.is-2 {
+        font-size: 2.75rem;
+        margin-bottom: 1rem;
+    }
+    
+    .subtitle.is-6, .subtitle.is-5, .subtitle.is-4 {
+        margin-bottom: 3rem;
+    }
+}
