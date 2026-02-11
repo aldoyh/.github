@@ -15,6 +15,7 @@ This is the `.github` repository for aldoyh, featuring a custom landing page bui
 * Alpine JS v3.x for interactive elements
 * Automated deployments with GitHub Actions
 * Docker support for containerized deployment
+* Arabic fonts collection from Google Fonts (59 font families)
 
 ## 👌 Usage
 
@@ -59,6 +60,30 @@ This repository includes several GitHub Actions workflows:
 - **deploy.yml** - Automated deployment pipeline
 - **release.yml** - Release management and versioning
 - **standard-version.yml** - Semantic versioning
+
+## 🔤 Arabic Fonts
+
+This repository includes a collection of 59 Arabic-supported fonts from [Google Fonts](https://github.com/google/fonts), located in the `arabic-fonts/` directory.
+
+### Download Script
+
+Use the included bash script to download Arabic fonts:
+
+```sh
+# Download all Arabic fonts
+./download-arabic-fonts.sh
+
+# Download a specific font by name
+./download-arabic-fonts.sh --name "Amiri"
+```
+
+The script will:
+1. Clone the Google Fonts repository
+2. Scan all fonts for Arabic script support
+3. Download matching fonts with their licenses and metadata
+4. Generate a summary README with the list of downloaded fonts
+
+See [arabic-fonts/README.md](arabic-fonts/README.md) for the complete list of available fonts.
 
 ## 📝 License
 
