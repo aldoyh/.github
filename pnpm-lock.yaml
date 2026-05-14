@@ -33,7 +33,7 @@ importers:
         specifier: 7.0.0
         version: 7.0.0
       iconify-icon:
-        specifier: ^2.3.0
+        specifier: ^2.0.0
         version: 2.3.0
       js-datepicker:
         specifier: 5.18.2
@@ -61,10 +61,10 @@ importers:
         version: 6.2.5
     devDependencies:
       '@fontsource-variable/cabin':
-        specifier: ^5.2.8
+        specifier: ^5.0.19
         version: 5.2.8
       '@fontsource-variable/open-sans':
-        specifier: ^5.2.7
+        specifier: ^5.0.29
         version: 5.2.7
       autoprefixer:
         specifier: 10.4.19
